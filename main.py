@@ -25,4 +25,4 @@ def api_id():
     
     return jsonify(results), 200 if results['status'] == 200 else 400
 
-app.run()
+app.run(host='0.0.0.0', port=6969)
