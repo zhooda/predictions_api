@@ -23,15 +23,15 @@ def api_id():
 
         if 'verbose' in request.args and request.args['verbose'] == 'true':
             if 0.4 <= prediction < 0.5:
-                v = f'skewed zeeshan: {prediction}'
+                v = f'skewed zeeshan'
             elif 0.5 < prediction <= 0.6:
-                v = f'skewed inara: {prediction}'
+                v = f'skewed inara'
             elif prediction == 0.5:
-                v = f'equal: {prediction}'
+                v = f'equal'
             elif prediction > 0.6:
-                v = f"inara: {prediction}"
+                v = f"inara"
             else:
-                v = f"zeeshan: {prediction}"
+                v = f"zeeshan"
             results['verbose'] = v
 
     else:
